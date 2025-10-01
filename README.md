@@ -26,25 +26,6 @@ This method frames symbolic regression as a **sequence-to-sequence translation p
 
 ---
 
-## Project Structure
-
-The code is contained within a single Python notebook. It is structured into several sections:
-
-- **Introduction:** A conceptual overview of the two symbolic regression methods.
-- **Datset Generation:** Functions to generate synthetic datasets for evaluation, including one with a known formula and another with a hidden formula.
-- **EQL Section:**
-    - **Base Functions:** Classes for mathematical operations used as activation functions.
-    - **Model Architecture:** The `SymbolicLayer` and `SymbolicNet` classes define the EQL network.
-    - **Training and Testing:** Functions to train the EQL model, evaluate its performance, and extract the final expression.
-    - **L1 Regularization:** An optional bonus section that demonstrates how L1 regularization can be used to simplify expressions.
-- **Seq2Seq Section:**
-    - **Data Generation:** Code to generate a large number of expressions and corresponding datasets for training the Transformer model.
-    - **Transformer Architecture:** The `TransformerModel` and related classes (`TokenEmbeddings`, `MultiHeadAttention`, etc.) that define the Seq2Seq model.
-    - **Training and Evaluation:** Functions to train the Transformer model and evaluate it on new datasets using beam search.
-    - **Parameter Optimization:** Code to fit the predicted expression to the data by optimizing a constant term.
-
----
-
 ## Getting Started
 
 ### Prerequisites
